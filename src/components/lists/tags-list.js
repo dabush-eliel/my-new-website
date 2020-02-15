@@ -1,6 +1,6 @@
 import React from "react";
 
-function TagsList({ tags, className = "" }) {
+function TagsList({ tags, className = `` }) {
     return (
         <div className={`px-3 py-4 ${className}`}>
             {tags.map(tag => (

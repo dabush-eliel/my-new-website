@@ -14,29 +14,29 @@ import SectionSeparator from "../components/sections/section-separator";
 // function SectionSe
 
 function IndexPage() {
-  return (
-    <Layout>
-      <SEO
-        keywords={[
-          `eliel`,
-          `dabush`,
-          `software engineer`,
-          `gatsby`,
-          `tailwind`,
-          `react`,
-          `tailwindcss`
-        ]}
-        title="Home"
-      />
-      <AboutSection />
-      <SectionSeparator />
+    return (
+        <Layout>
+            <SEO
+                keywords={[
+                    `eliel`,
+                    `dabush`,
+                    `software engineer`,
+                    `gatsby`,
+                    `tailwind`,
+                    `react`,
+                    `tailwindcss`
+                ]}
+                title="Home"
+            />
+            <AboutSection />
+            <SectionSeparator />
 
-      <ExperienceSection />
-      <EducationSection />
-      <AbilitiesSection />
-      <ContactSection />
-    </Layout>
-  );
+            <ExperienceSection />
+            <EducationSection />
+            <AbilitiesSection />
+            <ContactSection />
+        </Layout>
+    );
 }
 
 export default IndexPage;

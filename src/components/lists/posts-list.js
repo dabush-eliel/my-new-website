@@ -4,11 +4,11 @@ import { Link } from "gatsby";
 import TagsList from "./tags-list";
 
 function PostsList({ posts }) {
-    console.log("posts", posts.length);
+    console.log(`posts`, posts.length);
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2" style={{ justifyItems: "center" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2" style={{ justifyItems: `center` }}>
             {posts.map(({ node: { id, timeToRead, frontmatter, fields: { slug } } }) => (
-                <div key={frontmatter.title} className="py-10 w-full">
+                <div className="py-10 w-full" key={frontmatter.title}>
                     <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto">
                         <Link to={`/post/${slug}`}>
                             {frontmatter.image && (
@@ -24,7 +24,7 @@ function PostsList({ posts }) {
                                 </p>
                             </div>
                         </Link>
-                        <TagsList tags={frontmatter.tags}/>
+                        <TagsList tags={frontmatter.tags} />
                     </div>
                 </div>
             ))}

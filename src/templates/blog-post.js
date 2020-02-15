@@ -12,22 +12,19 @@ function BlogPost({ data, pageContext }) {
     //   const { author, allTags, allCategories } = pageContext;
     const { markdownRemark: post } = data;
     const { frontmatter } = post;
-    console.log("post", post);
-    console.log("pageContext", pageContext);
+    console.log(`post`, post);
+    console.log(`pageContext`, pageContext);
     return (
         <Layout className="text-white" hideProfile>
             <SEO keywords={[`eliel`, `dabush`, frontmatter.title]} title={frontmatter.title} />
             <div className="pb-5">
-                <Link to={`/blog`} className=" text-sm inline-block">
-                    <IoIosArrowBack title="Back" className="inline-block" />
-                    {" Back"}
+                <Link className=" text-sm inline-block" to={`/blog`}>
+                    <IoIosArrowBack className="inline-block" title="Back" />
+                    {` Back`}
                 </Link>
             </div>
             {frontmatter.image && (
-                <Img
-                    className="h-64"
-                    fluid={frontmatter.image.childImageSharp.fluid}
-                />
+                <Img className="h-64" fluid={frontmatter.image.childImageSharp.fluid} />
             )}
             <div className="text-gray-100">
                 <div className="text-3xl text-yellow-600 py-5">
