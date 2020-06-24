@@ -2,5 +2,5 @@
 
 // export default {
 //     name: "Titles",
-//     component: 
+//     component:
 // }

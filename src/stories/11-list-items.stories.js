@@ -3,7 +3,7 @@ import ListItems from "../components/sections/list-items";
 import { jobs } from "../utils/data/experiences/jobs";
 
 export default {
-    title: "List Items",
+    title: `List Items`,
     components: ListItems
 };
 

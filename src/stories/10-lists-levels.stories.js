@@ -1,31 +1,31 @@
 import React from "react";
 import ListLevels from "../components/sections/list-levels";
-import {jobs} from "../utils/data/experiences/jobs";
+import { jobs } from "../utils/data/experiences/jobs";
 
 export default {
-    title: "List Levels",
+    title: `List Levels`,
     component: ListLevels
 };
 
 const items = [
     {
-        name: "Sing",
+        name: `Sing`,
         level: 1
     },
     {
-        name: "Draw",
+        name: `Draw`,
         level: 2
     },
     {
-        name: "Design",
+        name: `Design`,
         level: 3
     },
     {
-        name: "Music",
+        name: `Music`,
         level: 4
     },
     {
-        name: "Development",
+        name: `Development`,
         level: 5
     }
 ];
