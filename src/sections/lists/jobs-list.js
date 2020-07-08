@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import ListItems from "../sections/list-items";
+import ListItems from "../../components/lists/list-items";
 
 function JobsList({ jobs }) {
     return (

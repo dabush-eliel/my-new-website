@@ -1,12 +1,11 @@
 import React from "react";
 import StarRatings from "react-star-ratings";
 
-function SplitItems({ items, splitLevel }) {
-    //inline-block w-full md:w-1/${splitLevel}
+function RatingList({ items }) {
     return (
-        <div className={`px-6 md:p-10 w-full`}>
+        <div className="px-6 md:p-10 w-full">
             {items.map(item => (
-                <div className="flex flex-row flex-wrap justify-between hover:bg-teal-400">
+                <div className="flex flex-row flex-wrap justify-between hover:bg-teal-200">
                     <div className="inline-block">{item.name}</div>
                     <div className="inline-block">
                         <StarRatings
@@ -25,17 +24,16 @@ function SplitItems({ items, splitLevel }) {
 }
 
 function ListLevels({ items, title }) {
-    const splitLevel = 2;
-    const middleItem = items.length / splitLevel;
+    const middleItem = items.length / 2;
     const leftItems = items.filter((_, i) => i < middleItem);
     const rightItems = items.filter((_, i) => i >= middleItem);
 
     return (
-        <div className={`list-items py-5`}>
-            <div className="text-2xl font-bold text-gray-300 py-5">{title}</div>
+        <div className="list-items py-5">
+            <div className="text-2xl font-bold py-5">{title}</div>
             <div className="flex flex-col md:flex-row">
-                <SplitItems items={leftItems} splitLevel={splitLevel} />
-                <SplitItems items={rightItems} splitLevel={splitLevel} />
+                <RatingList items={leftItems} />
+                <RatingList items={rightItems} />
             </div>
         </div>
     );

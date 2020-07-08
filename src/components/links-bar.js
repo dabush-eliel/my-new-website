@@ -17,11 +17,11 @@ function LinksBar({ className = `` }) {
             className={`${className} flex-col justify-center items-center min-h-full md:inline-block w-full md:w-auto`}
         >
             {/* <BarItem name="about" to="/" /> */}
-            <BarItem name="experience" to="/#experience-section" />
-            <BarItem name="education" to="/#education-section" />
-            <BarItem name="abilities" to="/#abilities-section" />
-            <BarItem name="contact" to="/#contact-section" />
-            {/* <BarItem name="blog" to="/blog" /> */}
+            {/* <BarItem name="experience" to="/#experience-section" /> */}
+            {/* <BarItem name="education" to="/#education-section" /> */}
+            {/* <BarItem name="abilities" to="/#abilities-section" /> */}
+            {/* <BarItem name="contact" to="/#contact-section" /> */}
+            <BarItem name="blog" to="/blog" />
         </ul>
     );
 }

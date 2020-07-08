@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
-import logo from "../images/logo/white_logo_transparent_background.png";
+import lightLogo from "../images/logo/white_logo_transparent_background.png";
+import darkLogo from "../images/logo/logo_transparent_background.png";
 import SocialLinks from "./social-links";
-// import logo from "../images/logo/logo_transparent_background.png";
 
 function Header() {
     const [isExpanded, toggleExpansion] = useState(false);
@@ -17,18 +17,18 @@ function Header() {
     `);
 
     return (
-        <header className="bg-gray-800">
-            <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-4 md:p-8">
+        <header className="bg-teal-700">
+            <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto py-4 md:py-8">
                 <Link to="/">
                     <img
                         alt="Logo - Eliel Dabush, software engineer"
                         className="inline-block mx-auto w-48"
                         id="logo"
-                        src={logo}
+                        src={lightLogo}
                     />
                 </Link>
 
-                <SocialLinks />
+                <SocialLinks light={true} />
                 {/* <button
           className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white"
           onClick={() => toggleExpansion(!isExpanded)}

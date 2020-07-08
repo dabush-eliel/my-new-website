@@ -1,5 +1,5 @@
 import React from "react";
-import ListLevels from "../sections/list-levels";
+import ListLevels from "../../components/lists/list-levels";
 
 function ToolsList({ tools }) {
     return <ListLevels items={tools} title="Tools" />;

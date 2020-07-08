@@ -1,5 +1,5 @@
 import React from "react";
-import ListItems from "../sections/list-items";
+import ListItems from "../../components/lists/list-items";
 
 function ProjectsList({ projects }) {
     return <ListItems items={projects} title="Projects" />;

@@ -1,10 +1,10 @@
 export const projects = [
     {
         name: `My Website`,
-        description: `My personal website showing my resume and writing a tech blog.`,
+        description: `Built my personal website with GatsbyJS & TailwindCSS, showing my resume and writing a tech blog.`,
         link: ``,
         images: [`1-my-website.png`],
-        skills: [`Gatsby`, `ReactJS`, `NodeJS`, `tailwind`, `AWS`],
+        skills: [`GatsbyJS`, `ReactJS`, `NodeJS`, `TailwindCSS`, `AWS`],
         years: `2020`
     },
     // {
@@ -16,7 +16,7 @@ export const projects = [
     // },
     {
         name: `Ordeli`,
-        description: `Food delivery app for delivery companies to manage orders and workers.`,
+        description: `Delivery management system for delivery companies to manage live orders, communications and workers.`,
         link: ``,
         images: [`ordeli-1.png`],
         skills: [
@@ -26,16 +26,18 @@ export const projects = [
             `MongoDB`,
             `Git`,
             `Product`,
-            `UI/UX`,
+            `UI`,
+            `UX`,
             `AWS`,
-            `ES6`
+            `ES6`,
+            `Bootstrap`
         ],
         years: `2016 - 2019`
     },
     {
         name: `MySalaries`,
-        description: `Mobile application for saving daily salary and tips with monthly statistics.`,
-        link: `http://my-salaries.com/#/`,
+        description: `Daily salary tracker, calculates overtime and bonuses with monthly statistics.`,
+        link: ``,
         images: [
             `01-mysalaries-home`,
             `02-mysalaries-guide-welcome`,

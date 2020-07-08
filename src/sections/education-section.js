@@ -1,6 +1,6 @@
 import React from "react";
 import { education } from "../utils/data/educations/education";
-import EducationList from "../components/lists/education-list";
+import EducationList from "./lists/education-list";
 import SectionLayout from "../components/sections/section-layout";
 
 function EducationSection() {

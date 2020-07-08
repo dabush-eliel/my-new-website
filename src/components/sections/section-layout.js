@@ -5,7 +5,7 @@ import SectionSeparator from "./section-separator";
 
 function SectionLayout({ id, title, quote, children }) {
     return (
-        <section className="text-white" id={id}>
+        <section className="" id={id}>
             {title && <SectionTitle title={title} />}
             {quote && <SectionQuote quote={quote} />}
             {children}

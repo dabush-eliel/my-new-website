@@ -1,15 +1,17 @@
 ---
-title: "Gatsby Website & Blog"
+title: "My Gatsby Website & Blog"
 date: "2020-02-10T14:00:00Z"
 author: "Eliel Dabush"
 layout: post
 draft: true
 category: "one"
-description: "Creating my personal website & blog with Gatsby"
+description: "Creating my personal website & blog with GatsbyJS."
 image: "../../images/undraw_updated_resume_u4fy.png"
 tags:
-    - "gatsby"
+    - "gatsby" 
     - "react"
+    - "graphql"
+    - "nodejs"
 ---
 
 # GatsbyJS

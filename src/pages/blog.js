@@ -3,22 +3,12 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { graphql, StaticQuery, Link } from "gatsby";
 import PostsList from "../components/lists/posts-list";
+import { keywords } from "../utils/data/keywords";
 
 function BlogPage() {
     return (
-        <Layout>
-            <SEO
-                keywords={[
-                    `eliel`,
-                    `dabush`,
-                    `software engineer`,
-                    `gatsby`,
-                    `tailwind`,
-                    `react`,
-                    `tailwindcss`
-                ]}
-                title="Blog"
-            />
+        <Layout hideProfile={true}>
+            <SEO keywords={keywords} title="Blog" />
             <StaticQuery
                 query={blogQuery}
                 render={({ allMarkdownRemark: { edges: posts } }) => <PostsList posts={posts} />}

@@ -18,16 +18,16 @@ function BlogPost({ data, pageContext }) {
         <Layout className="text-white" hideProfile>
             <SEO keywords={[`eliel`, `dabush`, frontmatter.title]} title={frontmatter.title} />
             <div className="pb-5">
-                <Link className=" text-sm inline-block" to={`/blog`}>
+                <Link className=" text-sm inline-block underline" to={`/blog`}>
                     <IoIosArrowBack className="inline-block" title="Back" />
-                    {` Back`}
+                    {` All Posts`}
                 </Link>
             </div>
             {frontmatter.image && (
                 <Img className="h-64" fluid={frontmatter.image.childImageSharp.fluid} />
             )}
-            <div className="text-gray-100">
-                <div className="text-3xl text-yellow-600 py-5">
+            <div className="">
+                <div className="text-3xl py-5">
                     {frontmatter.title}
                     <div className="text-sm text-blue-500 italic p-2">
                         <span className="">
@@ -45,6 +45,8 @@ function BlogPost({ data, pageContext }) {
                 <div className="py-2">{frontmatter.description}</div>
 
                 <div className="" dangerouslySetInnerHTML={{ __html: post.html }} />
+
+                <div className="py-10" />
             </div>
         </Layout>
     );
