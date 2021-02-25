@@ -3,7 +3,6 @@ import { SocialIcon } from "react-social-icons";
 
 // todo -> get links from data
 function SocialLink({ light = true, ...props }) {
-    console.log("props:", props);
     // #d69e2e
     return (
         <span className="p-2 hover:opacity-50">

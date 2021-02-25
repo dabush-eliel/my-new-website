@@ -2,7 +2,13 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-    purge: [],
+    purge: [
+        "./pages/**/*.js",
+        "./components/**/*.js",
+        "./sections/**/*.js",
+        "./context/**/*.js",
+        "./templates/**/*.js"
+    ],
     darkMode: false, // or 'media' or 'class'
     theme: {
         colors: {
@@ -26,7 +32,7 @@ module.exports = {
             // secondary: "#464D77", //colors.amber[300],
             // highlight: "#36827F", //"#E83151",
             // tprimary: "#464D77", // colors.gray[600], //colors.indigo[800],
-            // "tprimary-lighter": colors.gray[100], 
+            // "tprimary-lighter": colors.gray[100],
             tlight: colors.gray[50]
         },
         extend: {}
