@@ -1,14 +1,21 @@
 import React from "react";
-import ProfileImage from "../components/profile-image";
+import Layout from "../layout";
+import SEO from "../seo";
+import ExperienceSection from "../../sections/experience-section";
+import EducationSection from "../../sections/education-section";
+import AbilitiesSection from "../../sections/abilities-section";
+import SectionSeparator from "../sections/section-separator";
+import { keywords } from "../../utils/data/keywords";
+import ProfileImage from "../profile-image";
 import { Link } from "gatsby";
 
-function AboutSide() {
-    return (
+const AboutSection = () => (
+    <section className="grid grid-cols-1 md:gap-4 py-5 md:grid-cols-3">
         <div className="flex flex-col items-center">
             <ProfileImage />
             <div className="p-5"></div>
             <div className="">
-                <div className="font-bold text-teal-400 text-lg">Hey, I'm Eliel Dabush,</div>
+                <div className="font-bold text-secondary text-lg">Hey, I'm Eliel Dabush,</div>
                 <div>
                     I'm a full-stack javascript developer, I build full-stack web & mobile
                     applications. My favourite stack is: NodeJS, React and GraphQL.
@@ -29,37 +36,20 @@ function AboutSide() {
                 <div>☕ &nbsp; &nbsp; And I like my coffee extra hot.</div>
             </div>
         </div>
-    );
-}
+    </section>
+);
 
-function Button({ text }) {
+function AboutPage() {
     return (
-        <div className="uppercase no-underline text-white bg-teal-500 hover:bg-teal-700 font-semibold py-2 px-8 rounded">
-            {text}
-        </div>
+        <Layout>
+            <SEO keywords={keywords} title="About" />
+            <AboutSection />
+            <SectionSeparator />
+            <ExperienceSection />
+            <EducationSection />
+            <AbilitiesSection />
+        </Layout>
     );
 }
 
-function BlogSide() {
-    return (
-        <div className="h-32 flex flex-col items-center md:col-span-2 md:h-auto justify-center">
-            <Link className="" to={"/blog"}>
-                <Button text={"blog"} />
-            </Link>
-        </div>
-    );
-}
-
-function MainSection() {
-    //md:grid-cols-3
-    return (
-        <section id="main-section">
-            <div className="grid grid-cols-1 md:gap-4 py-5">
-                <AboutSide />
-                {/* <BlogSide /> */}
-            </div>
-        </section>
-    );
-}
-
-export default MainSection;
+export default AboutPage;

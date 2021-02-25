@@ -1,18 +1,24 @@
 import React from "react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../layout";
+import SEO from "../seo";
 import { graphql, StaticQuery, Link } from "gatsby";
-import PostsList from "../components/lists/posts-list";
-import { keywords } from "../utils/data/keywords";
+import PostsList from "../lists/posts-list";
+import { keywords } from "../../utils/data/keywords";
+import SearchBox from "../search-box";
 
 function BlogPage() {
     return (
         <Layout hideProfile={true}>
             <SEO keywords={keywords} title="Blog" />
-            <StaticQuery
-                query={blogQuery}
-                render={({ allMarkdownRemark: { edges: posts } }) => <PostsList posts={posts} />}
-            />
+            <div>
+                <SearchBox />
+                <StaticQuery
+                    query={blogQuery}
+                    render={({ allMarkdownRemark: { edges: posts } }) => (
+                        <PostsList posts={posts} />
+                    )}
+                />
+            </div>
         </Layout>
     );
 }

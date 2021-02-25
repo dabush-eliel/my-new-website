@@ -7,7 +7,7 @@ function RatingList({ items }) {
             {items.map(item => (
                 <div className="flex flex-row flex-wrap justify-between hover:bg-teal-200">
                     <div className="inline-block">{item.name}</div>
-                    <div className="inline-block">
+                    {/* <div className="inline-block">
                         <StarRatings
                             name={item.name}
                             numberOfStars={5}
@@ -16,7 +16,7 @@ function RatingList({ items }) {
                             starRatedColor="#d69e2e"
                             starSpacing="3px"
                         />
-                    </div>
+                    </div> */}
                 </div>
             ))}
         </div>

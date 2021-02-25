@@ -1,6 +1,7 @@
 export const keywords = [
     `eliel`,
     `dabush`,
+    `senior`,
     `software engineer`,
     `gatsby`,
     `tailwind`,
@@ -8,6 +9,17 @@ export const keywords = [
     `tailwindcss`,
     `graphql`,
     `developer`,
-    `blog`,
-    `web`
+    `web`,
+    `programming`,
+    `tech blog`,
+    `graphql`,
+    `docker`,
+    `k8s`,
+    `kubernetes`,
+    `aws`,
+    `git`,
+    `system design`,
+    `refactor`,
+    `unit test`,
+    `e2e`
 ];

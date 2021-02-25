@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import Img from "gatsby-image";
 import { MdLocationOn } from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { ColorContext } from "../../context/color-context";
 
 function ItemName({ name, link, logo }) {
     return (
@@ -21,8 +22,9 @@ function ItemName({ name, link, logo }) {
 }
 
 function ItemPeriod({ period }) {
+    const color = useContext(ColorContext);
     return (
-        <div className="text-sm text-blue-500 italic p-2  w-48">
+        <div className={`text-sm text-${color}-500 italic p-2 w-48`}>
             <FaRegCalendarAlt className="inline-block" />
             {` `}
             <span className="px-2">{` ${period}`}</span>
@@ -48,7 +50,7 @@ function ItemSkills({ skills = [] }) {
 
 function ItemLocation({ location = "can't find it..." }) {
     return (
-        <div className="px-5 text-red-500 py-1">
+        <div className="px-5 text-red-500 py-1 text-sm">
             <MdLocationOn className="inline-block" />
             {` `}
             <span className="px-2">{` ${location}`}</span>
@@ -66,7 +68,7 @@ function ListItem({ item, logo }) {
                 </div>
                 <div className="flex flex-col content-center py-1 w-full">
                     <ItemTitle title={item.title} />
-                    <ItemDescription description={item.description} />
+                    {/* <ItemDescription description={item.description} /> */}
                     <ItemSkills skills={item.skills} />
                     {item.location && <ItemLocation location={item.location} />}
                 </div>

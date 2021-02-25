@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import Helmet from "react-helmet";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, isArticle, img }) {
     const { site } = useStaticQuery(graphql`
         query DefaultSEOQuery {
             site {
@@ -38,7 +38,11 @@ function SEO({ description, lang, meta, keywords, title }) {
                 },
                 {
                     property: `og:type`,
-                    content: `website`
+                    content: isArticle ? `article` : `website`
+                },
+                {
+                    property: `og:image`,
+                    content: img
                 },
                 {
                     name: `twitter:card`,
@@ -75,7 +79,9 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
     lang: `en`,
     keywords: [],
-    meta: []
+    meta: [],
+    isArticle: false,
+    img: ""
 };
 
 SEO.propTypes = {
@@ -83,7 +89,9 @@ SEO.propTypes = {
     keywords: PropTypes.arrayOf(PropTypes.string),
     lang: PropTypes.string,
     meta: PropTypes.array,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    isArticle: PropTypes.bool,
+    img: PropTypes.string
 };
 
 export default SEO;

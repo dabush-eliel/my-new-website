@@ -3,7 +3,6 @@ export const projects = [
         name: `My Website`,
         description: `Built my personal website with GatsbyJS & TailwindCSS, showing my resume and writing a tech blog.`,
         link: ``,
-        images: [`1-my-website.png`],
         skills: [`GatsbyJS`, `ReactJS`, `NodeJS`, `TailwindCSS`, `AWS`],
         years: `2020`
     },

@@ -1,12 +1,13 @@
 import React from "react";
-import SocialLinks from "./social-links";
+import NavLinks from "./nav-links";
 
-function Footer() {
+function Footer({color, colorLevel = 300}) {
     return (
-        <footer className="bg-teal-700">
-            <nav className="flex flex-wrap justify-end items-center max-w-4xl mx-auto py-4 md:py-8">
-                <SocialLinks light={true} />
-            </nav>
+        <footer className={`bg-${color}-${colorLevel}`}>
+            <div className="flex flex-wrap items-center justify-center md:justify-between max-w-4xl mx-auto py-4 md:py-8 px-3 md:px-1">
+                <span className="text-sm text-tprimary">{new Date().getFullYear()} | ELIEL DABUSH</span>
+                <NavLinks />
+            </div>
         </footer>
     );
 }

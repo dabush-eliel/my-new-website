@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `Eliel Dabush`,
-        description: `Eliel Dabush personal website and blog`,
+        description: `Eliel Dabush personal website and tech blog`,
         author: `@dabush-eliel`
     },
     plugins: [
@@ -21,10 +21,10 @@ module.exports = {
         `gatsby-plugin-postcss`,
         {
             resolve: `gatsby-plugin-purgecss`,
-            options: {
-                tailwind: true,
-                purgeOnly: [`src/css/style.css`]
-            }
+            // options: {
+            //     tailwind: true,
+            //     purgeOnly: [`src/css/style.css`]
+            // }
         },
         `gatsby-plugin-offline`,
         {
@@ -54,14 +54,6 @@ module.exports = {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
                 trackingId: `UA-158103808-1`
-            }
-        },
-        {
-            resolve: `gatsby-plugin-s3`,
-            options: {
-                bucketName: `dabush.io`,
-                protocol: `https`,
-                hostname: `www.dabush.com`
             }
         }
     ]

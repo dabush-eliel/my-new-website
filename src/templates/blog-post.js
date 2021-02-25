@@ -16,7 +16,12 @@ function BlogPost({ data, pageContext }) {
     console.log(`pageContext`, pageContext);
     return (
         <Layout className="text-white" hideProfile>
-            <SEO keywords={[`eliel`, `dabush`, frontmatter.title]} title={frontmatter.title} />
+            <SEO
+                keywords={[`eliel`, `dabush`, frontmatter.title]}
+                title={frontmatter.title}
+                isArticle
+                img={frontmatter.image && frontmatter.image.publicURL}
+            />
             <div className="pb-5">
                 <Link className=" text-sm inline-block underline" to={`/blog`}>
                     <IoIosArrowBack className="inline-block" title="Back" />
@@ -67,6 +72,7 @@ export const blogPostQuery = graphql`
                 description
                 tags
                 image {
+                    publicURL
                     childImageSharp {
                         fluid(maxWidth: 600) {
                             ...GatsbyImageSharpFluid
