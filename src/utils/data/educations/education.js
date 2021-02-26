@@ -14,7 +14,7 @@ export const education = [
         description: `Specialized in web and mobile application. GPA 89/100.`,
         years: `2012 - 2015`,
         location: `Rishon LeZion, IL`,
-        skills: [`Web Development`, `AngularJS`, `NodeJS`, `MongoDB`, `Azure`]
+        skills: [`Algorithms`, `Design Patterns`, `Web Development`, `AngularJS`, `NodeJS`, `MongoDB`, `Azure`, `iOS`, `Android`]
         // link: "http://english.colman.ac.il/schools-departments-programs/school-of-computer-science/"
     }
 ];

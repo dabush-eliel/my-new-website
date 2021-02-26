@@ -1,11 +1,13 @@
-.profile-image {
-    filter: blur(0.5px) grayscale(90%);
-    opacity: .9;
-    transition: all 600ms ease-in-out;
-}
+@media only screen and (min-width: 600px) {
+    .profile-image {
+        filter: blur(0.5px) grayscale(90%);
+        opacity: 0.9;
+        transition: all 600ms ease-in-out;
+    }
 
-.profile-image:hover {
-    filter: blur(0);
-    opacity: 1;
-    transform: scale(1.05);
+    .profile-image:hover {
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1.05);
+    }
 }
