@@ -1,10 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { jobs } from "../../utils/data/experiences/jobs";
-import { projects } from "../../utils/data/experiences/projects";
 import { otherExperience } from "../../utils/data/experiences/other-experience";
-import SectionLayout from "../sections/section-layout";
 import { MdLocationOn } from "react-icons/md";
-import { FaRegCalendarAlt } from "react-icons/fa";
 import { ColorContext } from "../../context/color-context";
 import { education } from "../../utils/data/educations/education";
 
@@ -22,7 +19,11 @@ function ItemName({ name, link }) {
 function ItemSkills({ skills = [] }) {
     return (
         <div className="text-xs px-2 py-3 italic">
-            {skills.map((skill, index) => `${skill}${index === skills.length - 1 ? `` : `, `}`)}
+            {skills.map((skill, index) => (
+                <span key={skill + Date.now()}>
+                    {`${skill}${index === skills.length - 1 ? `` : `, `}`}
+                </span>
+            ))}
         </div>
     );
 }
@@ -60,7 +61,7 @@ function ListItems({ items, title }) {
             <div className="text-2xl font-bold py-1">{title}</div>
             <div>
                 {items.map(item => {
-                    return <ListItem item={item} />;
+                    return <ListItem key={item.name} item={item} />;
                 })}
             </div>
         </div>

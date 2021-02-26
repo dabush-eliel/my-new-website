@@ -1,10 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import ExperienceSection from "../sections/experience-section";
-import EducationSection from "../sections/education-section";
-import AbilitiesSection from "../sections/abilities-section";
-import SectionSeparator from "../components/sections/section-separator";
+import SectionSeparator from "../components/section-separator";
 import { keywords } from "../utils/data/keywords";
 import ProfileImage from "../components/profile-image";
 import SecondarySection from "../components/page-sections/secondary-section";
@@ -42,18 +39,22 @@ const MainSection = () => (
                 </div>
                 <span className="text-sm">
                     <div className="py-1">
-                        📍 &nbsp; &nbsp; <span className="block md:inline-block">I live in Tel Aviv.</span>
+                        📍 &nbsp; &nbsp;{" "}
+                        <span className="block md:inline-block">I live in Tel Aviv.</span>
                     </div>
                     <div className="py-1">
-                        🧘 &nbsp; &nbsp; <span className="block md:inline-block">I do yoga and meditation</span>
+                        🧘 &nbsp; &nbsp;{" "}
+                        <span className="block md:inline-block">I do yoga and meditation</span>
                         daily.
                     </div>
                     <div className="py-1">
-                        ⚽ &nbsp; &nbsp; <span className="block md:inline-block">I'm a fan of Maccabi</span>
+                        ⚽ &nbsp; &nbsp;{" "}
+                        <span className="block md:inline-block">I'm a fan of Maccabi</span>
                         Tel-Aviv.
                     </div>
                     <div className="py-1">
-                        🔥 &nbsp; &nbsp; <span className="block md:inline-block">And I like my coffee extra</span>
+                        🔥 &nbsp; &nbsp;{" "}
+                        <span className="block md:inline-block">And I like my coffee extra</span>
                         hot.
                     </div>
                 </span>

@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 
 import Layout from "../components/layout";
@@ -8,15 +9,18 @@ function NotFoundPage() {
     return (
         <Layout>
             <SEO title="404: Not found" />
-            <div className="items-center">
+            <div className="flex flex-col items-center">
                 <img
                     alt="Ghost getting abducted by aliens"
                     className="block mx-auto w-1/2"
                     src={abductionIllustration}
                 />
-                <h2 className="text-2xl font-bold inline-block my-8 mx-auto p-3">
-                    Looks like this page is a ghost that got abducted by aliens...
+                <h2 className="text-2xl font-bold text-center inline-block my-8 mx-auto p-3">
+                    Ooops...
                 </h2>
+                <span className="underline p-5">
+                    <Link to="/"> Back Home</Link>
+                </span>
             </div>
         </Layout>
     );
