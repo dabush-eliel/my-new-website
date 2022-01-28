@@ -6,8 +6,10 @@ import { ColorContext } from "../context/color-context";
 import ColorPicker from "./color-picker";
 import DarkModeToggle from "./dark-mode-toggle";
 
+const DEFAULT_COLOR = 'violet';
+
 function Layout({ children }) {
-    const envInitColor = process.env.INIT_COLOR || "indigo";
+    const envInitColor = process.env.INIT_COLOR || DEFAULT_COLOR;
     const [darkMode, setDarkMode] = React.useState(envInitColor === "dark");
     const initColor = darkMode ? "gray" : envInitColor;
     const [color, setColor] = React.useState(initColor);
@@ -15,7 +17,7 @@ function Layout({ children }) {
 
     const toggleDarkMode = () => {
         setDarkMode(currentMode => {
-            setColor(!currentMode ? "gray" : "indigo");
+            setColor(!currentMode ? "gray" : DEFAULT_COLOR);
             return !currentMode;
         });
     };
@@ -37,6 +39,13 @@ function Layout({ children }) {
                     {children}
                 </main>
                 <Footer color={color} colorLevel={colorLevel} />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function(b,o,n,g,s,r,c){if(b[s])return;b[s]={};b[s].scriptToken="Xy00MjUzOTQ5ODU";b[s].callsQueue=[];b[s].api=function(){b[s].callsQueue.push(arguments);};r=o.createElement(n);c=o.getElementsByTagName(n)[0];r.async=1;r.src=g;r.id=s+n;c.parentNode.insertBefore(r,c);})(window,document,"script","https://cdn.oribi.io/Xy00MjUzOTQ5ODU/oribi.js","ORIBI");
+                            `,
+                    }}
+                />
             </div>
         </ColorContext.Provider>
     );

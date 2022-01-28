@@ -58,6 +58,13 @@ module.exports = {
             options: {
                 trackingId: `UA-158103808-1`
             }
-        }
+        },
+        {
+            resolve: `gatsby-plugin-linkedin-insight`,
+            options: {
+              partnerId: `4109793`,
+              includeInDevelopment: false
+            }
+          }
     ]
 };

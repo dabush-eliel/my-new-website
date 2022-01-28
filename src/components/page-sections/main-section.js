@@ -10,23 +10,20 @@ function MainSection() {
                     <div className="my-8 pb-2">
                         <h1 className="font-medium py-2 text-xl md:text-4xl md:pb-4">
                             Hey, <br />
-                            I'm Eliel Dabush,
+                            I'm Eliel,
                         </h1>
-                        <div>
-                            I am full-stack javascript engineer. I build web & mobile applications.
+                        <div className="my-3">
+                            I'm a full-stack software engineer and technical lead @ Oribi.
                             <br />
-                            My favourite stack these days is: NodeJS/NestJS, React, GraphQL and
-                            MongoDB, although sometimes PostgreSQL/MySQL would be the better choice
-                            😉.
+                            My current stack is: React, Next, MobX, Java, Spring, MySQL, Redis, Kafka.
                         </div>
-                        <div>
+                        <div className="my-3">
                             My programming journey started back in 2015, just when I finished my CS
                             degree.
                         </div>
-                        <div>
-                            I am a team player who loves coding, web engineering, system design and
-                            architecture, clean code, lean development, agile methodologies,
-                            automations and there is so much more.
+                        <div className="my-3">
+                            I'm a team player who loves coding, web engineering, system design and
+                            clean architecture. I'm curious about data, system scaling, developer experience and new technologies.
                         </div>
                     </div>
                     <span className="text-sm">
@@ -36,20 +33,17 @@ function MainSection() {
                         </div>
                         <div className="py-1">
                             🧘 &nbsp; &nbsp;{" "}
-                            <span className="block md:inline-block">I do yoga and meditation</span>
-                            daily.
+                            <span className="block md:inline-block">I do yoga and meditation daily.</span>
                         </div>
                         <div className="py-1">
                             ⚽ &nbsp; &nbsp;{" "}
-                            <span className="block md:inline-block">I'm a fan of Maccabi</span>
-                            Tel-Aviv.
+                            <span className="block md:inline-block">I'm a fan of Maccabi Tel-Aviv.</span>
                         </div>
                         <div className="py-1">
                             🔥 &nbsp; &nbsp;{" "}
                             <span className="block md:inline-block">
-                                And I like my coffee extra
+                                And I like my coffee extra hot.
                             </span>
-                            hot.
                         </div>
                     </span>
                 </div>

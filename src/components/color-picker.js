@@ -20,9 +20,9 @@ function ColorPicker({ setColor }) {
                 }
                 onChange={setter}
             >
-                {colors.map(ccolor => (
-                    <option className={""} selected={ccolor === color} key={ccolor} value={ccolor}>
-                        {ccolor}
+                {colors.map(_color => (
+                    <option className={""} selected={_color === color} key={_color} value={_color}>
+                        {_color}
                     </option>
                 ))}
             </select>
