@@ -7,6 +7,7 @@
         "gatsby": "^2.32.3",
         "gatsby-image": "^2.4.9",
         "gatsby-plugin-catch-links": "^2.3.7",
+        "gatsby-plugin-facebook-pixel": "^1.0.8",
         "gatsby-plugin-google-analytics": "^2.3.6",
         "gatsby-plugin-linkedin-insight": "^1.0.1",
         "gatsby-plugin-manifest": "^2.4.14",

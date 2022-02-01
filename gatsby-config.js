@@ -62,9 +62,15 @@ module.exports = {
         {
             resolve: `gatsby-plugin-linkedin-insight`,
             options: {
-              partnerId: `4109793`,
-              includeInDevelopment: false
+                partnerId: `4109793`,
+                includeInDevelopment: false
             }
-          }
+        },
+        {
+            resolve: `gatsby-plugin-facebook-pixel`,
+            options: {
+                pixelId: "507327087391134"
+            }
+        }
     ]
 };
