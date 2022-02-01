@@ -17,9 +17,10 @@ function Layout({ children }) {
 
     const toggleDarkMode = () => {
         setDarkMode(currentMode => {
-            setColor(!currentMode ? "gray" : DEFAULT_COLOR);
+            setColor(!currentMode ? "gray" : envInitColor);
             return !currentMode;
         });
+        window.ORIBI?.api('track', `dark mode toggled`);
     };
 
     const bodyColors = darkMode ? "text-gray-200 bg-gray-800" : "bg-gray-100 text-gray-800";

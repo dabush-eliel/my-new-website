@@ -4,7 +4,8 @@ import { SocialIcon } from "react-social-icons";
 // todo -> get links from data
 function SocialLink({ light = true, eventName, ...props }) {
     const onClick = () => {
-        window.ORIBI.api('track', `${eventName} clicked`);
+        window.ORIBI?.api('track', `${eventName} clicked`);
+        window.lintrk && window.lintrk('track', { conversion_id: 6380298 });
     };
 
     // #d69e2e
@@ -23,9 +24,9 @@ function SocialLink({ light = true, eventName, ...props }) {
 function SocialLinks({ className = ``, ...props }) {
     return (
         <div className={`${className} social-links`}>
-            <SocialLink url="mailto:eliel.dabush@gmail.com" eventName="email" {...props} />
-            <SocialLink url="https://github.com/dabush-eliel" eventName="github" {...props} />
-            <SocialLink url="https://www.linkedin.com/in/eliel-dabush/"  eventName="linkedin" {...props} />
+            <SocialLink url="mailto:eliel.dabush@gmail.com" eventName="send email" {...props} />
+            <SocialLink url="https://github.com/dabush-eliel" eventName="github profie" {...props} />
+            <SocialLink url="https://www.linkedin.com/in/eliel-dabush/"  eventName="linkedin profile" {...props} />
             {/* <SocialLink url="https://dev.to/dabusheliel" {...props} /> */}
         </div>
     );
