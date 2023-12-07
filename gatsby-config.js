@@ -58,6 +58,7 @@ module.exports = {
             options: {
                 id: `GTM-MH2DSQKS`,
             }
+        },
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
