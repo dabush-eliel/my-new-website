@@ -10,7 +10,7 @@ function NavLinks({ socialLight = true }) {
     return (
         <nav className="flex flex-wrap justify-center items-center max-w-4xl py-4 md:py-8">
             {linkToBlog ? (
-                <>
+                <div className="my-5 md:my-0">
                     <a className="px-2" target={"_blank"} href={notionResourcesLink}>
                         <ButtonLink underline={false} text={"zelick.io"}></ButtonLink>
                     </a>
@@ -18,10 +18,9 @@ function NavLinks({ socialLight = true }) {
                     <a className="px-2" target={"_blank"} href={blogUrl}>
                         <ButtonLink underline={false} text={"devhabits"}></ButtonLink>
                     </a>
-                </>
+                </div>
             ) : null}
-            {"|"}
-            <span className="w-5"></span>
+            <span className="md:visible invisible">{"|"}</span>
             <SocialLinks light={socialLight} />
         </nav>
     );
