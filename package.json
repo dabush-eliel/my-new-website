@@ -3,6 +3,20 @@
     "description": "Personal website & blog - Eliel Dabush",
     "version": "3.0.141",
     "author": "Eliel Dabush <eliel.dabush@gmail.com>",
+    "license": "",
+    "scripts": {
+        "analyze:lint": "eslint --ext .jsx --ext .js .",
+        "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
+        "analyze": "yarn analyze:lint && yarn analyze:prettier",
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "fix:lint": "eslint --ext .jsx --ext .js . --fix",
+        "fix:prettier": "prettier --write '**/*.{js,css,md,json}'",
+        "fix": "yarn fix:lint && yarn fix:prettier",
+        "start": "yarn develop",
+        "serve": "gatsby serve",
+        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    },
     "dependencies": {
         "gatsby": "^2.32.3",
         "gatsby-image": "^2.4.9",
@@ -35,26 +49,13 @@
     "keywords": [
         "eliel",
         "dabush",
-        "gatsby",
-        "tailwind",
-        "tailwindcss",
-        "react",
+        "zelick",
+        "devhabits",
+        "staff",
+        "senior",
+        "software engineer",
         "javascript"
     ],
-    "license": "",
-    "scripts": {
-        "analyze:lint": "eslint --ext .jsx --ext .js .",
-        "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
-        "analyze": "yarn analyze:lint && yarn analyze:prettier",
-        "build": "gatsby build",
-        "develop": "gatsby develop",
-        "fix:lint": "eslint --ext .jsx --ext .js . --fix",
-        "fix:prettier": "prettier --write '**/*.{js,css,md,json}'",
-        "fix": "yarn fix:lint && yarn fix:prettier",
-        "start": "yarn develop",
-        "serve": "gatsby serve",
-        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
-    },
     "devDependencies": {
         "@babel/core": "^7.10.3",
         "@typescript-eslint/eslint-plugin": "2.17.0",

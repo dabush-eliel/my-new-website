@@ -17,15 +17,18 @@ function Header({ color, colorLevel = 300 }) {
     `);
 
     return (
-        <header className={`bg-gradient-to-l from-${color}-${300} to-${color}-${800}`}>
-            <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto py-4 md:py-6 px-3 md:px-1">
+        <header className={`bg-gradient-to-l from-${color}-${800} to-${color}-${600}`}>
+            <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto py-4 md:py-6 px-3 md:px-1 tracking-wide">
                 <Link to="/">
-                    <img
+                    <h1 id="text-logo" className="tracking-widest font-lato text-slate-900 font-light text-xl md:text-3xl inline-block mx-auto w-32 md:w-auto">
+                        ELIEL <span className="font-bold">DABUSH</span>
+                    </h1>
+                    {/* <img
                         alt="Logo - Eliel Dabush, software engineer"
                         className="inline-block mx-auto w-32 md:w-48"
                         id="logo"
                         src={lightLogo}
-                    />
+                    /> */}
                 </Link>
                 <NavLinks />
             </div>

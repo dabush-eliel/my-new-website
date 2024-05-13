@@ -1,6 +1,6 @@
 import React from "react";
 import { ColorContext } from "../context/color-context";
-import profile from "../images/profile.png";
+import profile from "../images/profile.jpg";
 import "./profile-image.css";
 
 function ProfileImage() {
