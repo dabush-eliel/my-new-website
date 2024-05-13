@@ -6,11 +6,11 @@ import { ColorContext } from "../context/color-context";
 import ColorPicker from "./color-picker";
 import DarkModeToggle from "./dark-mode-toggle";
 
-const DEFAULT_COLOR = 'violet';
+const DEFAULT_COLOR = 'indigo';
 
 function Layout({ children }) {
     const envInitColor = process.env.INIT_COLOR || DEFAULT_COLOR;
-    const [darkMode, setDarkMode] = React.useState(envInitColor === "dark");
+    const [darkMode, setDarkMode] = React.useState(true);
     const initColor = darkMode ? "gray" : envInitColor;
     const [color, setColor] = React.useState(initColor);
     const colorLevel = 600;
@@ -20,10 +20,9 @@ function Layout({ children }) {
             setColor(!currentMode ? "gray" : envInitColor);
             return !currentMode;
         });
-        window.ORIBI?.api('track', `dark mode toggled`);
     };
 
-    const bodyColors = darkMode ? "text-gray-200 bg-gray-800" : "bg-gray-100 text-gray-800";
+    const bodyColors = darkMode ? "text-gray-200 bg-gray-900" : "bg-gray-200 text-gray-800";
     return (
         <ColorContext.Provider value={color}>
             <div className={`flex flex-col font-mono min-h-screen ${bodyColors}`}>
@@ -40,13 +39,11 @@ function Layout({ children }) {
                     {children}
                 </main>
                 <Footer color={color} colorLevel={colorLevel} />
-                <script
+                {/* <script
                     dangerouslySetInnerHTML={{
-                        __html: `
-                            (function(b,o,n,g,s,r,c){if(b[s])return;b[s]={};b[s].scriptToken="Xy00MjUzOTQ5ODU";b[s].callsQueue=[];b[s].api=function(){b[s].callsQueue.push(arguments);};r=o.createElement(n);c=o.getElementsByTagName(n)[0];r.async=1;r.src=g;r.id=s+n;c.parentNode.insertBefore(r,c);})(window,document,"script","https://cdn.oribi.io/Xy00MjUzOTQ5ODU/oribi.js","ORIBI");
-                            `,
+                        __html: ``,
                     }}
-                />
+                /> */}
             </div>
         </ColorContext.Provider>
     );

@@ -10,7 +10,7 @@ function TestPage() {
         });
         const email = params.email || 'eliel@oribi.io';
         if (email && window.ORIBI) {
-            window.ORIBI.setUserEmail(email);
+            window.ORIBI?.setUserEmail?.(email);
             console.log(`set email: ${email}`);
         } else {
             console.log("window.ORIBI not found");
@@ -20,6 +20,7 @@ function TestPage() {
     return (
         <Layout>
             <Button onClick={setEmail}>SET EMAIL</Button>
+            <a href="">Read the blog</a>
         </Layout>
     );
 }

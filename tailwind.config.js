@@ -1,4 +1,5 @@
 // See https://tailwindcss.com/docs/configuration for details
+const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require("tailwindcss/colors");
 
 module.exports = {
@@ -29,7 +30,11 @@ module.exports = {
             // "tprimary-lighter": colors.gray[100],
             tlight: colors.gray[50]
         },
-        extend: {}
+        extend: {
+            fontFamily: {
+                lato: ['"Lato"', ...defaultTheme.fontFamily.sans]
+              }
+        }
     },
     variants: {
         extend: {}
