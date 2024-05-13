@@ -58,6 +58,12 @@ module.exports = {
             }
         },
         {
+            resolve: `gatsby-plugin-google-tagmanager`,
+            options: {
+                id: `GTM-MH2DSQKS`,
+            }
+        },
+        {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
                 trackingId: `UA-158103808-1`
