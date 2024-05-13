@@ -3,9 +3,9 @@ import ButtonLink from "./button-link";
 import SocialLinks from "./social-links";
 
 function NavLinks({ socialLight = true }) {
-    const notionResourcesLink = "//zelick.io";
-    const blogUrl = process.env.BLOG_URL;
-    const linkToBlog = blogUrl && Boolean(process.env.LINK_TO_BLOG);
+    const notionResourcesLink = "https://zelick.io";
+    const blogUrl = "https://substack.com/@elieldabush";
+    const linkToBlog = true; // blogUrl && Boolean(process.env.LINK_TO_BLOG);
 
     return (
         <nav className="flex flex-wrap justify-center items-center max-w-4xl py-4 md:py-8">
