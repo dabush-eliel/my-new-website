@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
-import lightLogo from "../images/logo/white_logo_transparent_background.png";
-import darkLogo from "../images/logo/dark_logo_transparent_background.png";
-import colorLogo from "../images/logo/logo_transparent_background.png";
 import NavLinks from "./nav-links";
+// import lightLogo from "../images/logo/white_logo_transparent_background.png";
+// import darkLogo from "../images/logo/dark_logo_transparent_background.png";
+// import colorLogo from "../images/logo/logo_transparent_background.png";
 
 function Header({ color, colorLevel = 300 }) {
     const { site } = useStaticQuery(graphql`

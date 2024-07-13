@@ -13,7 +13,7 @@ function MainSection() {
                             I'm Eliel,
                         </h1>
                         <div className="my-3">
-                            I love watching football ⚽, playing ping-pong 🏓 and practice yoga 🤸‍♂️.
+                            I love watching football ⚽, playing any kind of racket sport 🏓 and practice yoga 🤸‍♂️.
                         </div>
                         <div className="my-5">
                             <span className="block">
@@ -27,7 +27,7 @@ function MainSection() {
                             </span>
                         </div>
                         <div className="my-3">
-                            I write & share my own insights and experience about career, personal growth and software engineering. (subscribe)
+                            I write & share my own insights and experience about career, personal growth and software engineering.
                         </div>
                         <div className="my-3">
                             I believe communication is the key in team's success. Proactivity is the key for personal success.
@@ -36,16 +36,16 @@ function MainSection() {
                             I am curious about productivity and self growth, about 3P integrations and automation tools, and about using AI applications to mix it all together.
                         </div>
                         <div className="my-3">
-                            I use Notion to manage my notes, my projects, my knowledge and more areas of my life. I build free and premium Notion templates and I share Notion tips, knowledge and resources.
+                            I use Notion to manage my notes, my projects, my knowledge and more areas of my life. I build free and premium Notion templates and I share Notion tips and resources.
                         </div>
                     </div>
                     <span className="text-sm">
-                        <div className="py-3">
+                        {/* <div className="py-3">
                             💤 &nbsp;{" "}
                             <span className="block md:inline-block">
                                 I go to bed late.
                             </span>
-                        </div>
+                        </div> */}
                         {/* <div className="py-3">
                             🧘 &nbsp; &nbsp;{" "}
                             <span className="block md:inline-block">I do yoga and meditation daily.</span>
@@ -56,8 +56,8 @@ function MainSection() {
                         </div> */}
                         <div className="py-3">
                             🔥 &nbsp;{" "}
-                            <span className="block md:inline-block">
-                                And I like my latte extra hot.
+                            <span className="inline-block">
+                                I like my latte extra hot.
                             </span>
                         </div>
                     </span>

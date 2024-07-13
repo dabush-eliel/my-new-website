@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import SectionSeparator from "../components/section-separator";
 import { keywords } from "../utils/data/keywords";
 import MainSection from "../components/page-sections/main-section";
-import FeaturedSection from "../components/page-sections/featured-section";
+// import SectionSeparator from "../components/section-separator";
+// import FeaturedSection from "../components/page-sections/featured-section";
 
 function IndexPage() {
     return (
